@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "express-demo-a7c37": {
+      "hosting": {
+        "impilo": [
+          "express-demo-a7c37"
+        ]
+      }
+    }
+  }
+}

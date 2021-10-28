@@ -1,0 +1,47 @@
+
+.navbar {
+    background-color: rgba(55, 165, 154, 0.888);
+}
+
+.navbar .container .logo img {
+    height: 20%;
+    width: 20%;
+    object-fit: contain;
+    border-radius: 10rem;
+}
+
+.image-slider {
+    margin-top: 400px;
+    
+}
+
+.image-slider > img {
+    height: 50%;
+    
+}
+
+
+img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-inner {
+    object-fit: cover;
+}
+.carousel-item {
+    height: 500px !important;
+    margin-top: 93px;
+}
+
+.card-container {
+    margin: 30px;
+}
+
+
+
+
+
+
+

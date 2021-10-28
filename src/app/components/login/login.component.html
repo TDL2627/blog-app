@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg  navbar-dark py-3 ">
+  <div class="container">
+    <div class="logo">
+      <a href=""><img src="assets/images/logo.jpg"></a>
+      <a href="#" class="navbar-brand" style="margin-left: 20px;"></a>
+
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a routerLink="/login" class="nav-link text-light" style=" font-size: 1.2rem; font-weight: bold">Impilo</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="" class="nav-link" style="color: aliceblue;"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<html>
+
+<body>
+  <div class="container">
+    <div class="row content content">
+      <div class="col-md-6 mb-3">
+        <img src="assets/images/logo.jpg" class="img-fluid" alt="image">
+      </div>
+      <div class="col-md-6">
+        <h3 class="signin-text mb-3 text-light">Sign in</h3>
+        <form [formGroup]="loginForm">
+        
+
+          <div class="form-group text-light">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" formControlName="email">
+          </div>
+
+          <div class="form-group text-light">
+            <label for="email">Password</label>
+            <input type="password" name="password" class="form-control" formControlName="password">
+          </div>
+
+          <div class="form-group form-check text-light">
+            <input type="checkbox" name="checkbox" class="form-check-input" id="checkbox">
+            <label for="checkbox" class="form-check-label">Remember Me</label>
+          </div>
+          <button type="submit" (click)="loginUser(loginForm.value)" class="btn btn-class bg-warning">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Footer --> <router-outlet></router-outlet>
+<footer class="p-5 bg-warning text-light text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; 2021 Impilo blog</p>
+
+    
+</div>
+</footer>
+ 
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<nav  class="navbar navbar-expand-lg  navbar-dark py-3 ">
+    <div class="container">
+        <div class="logo">
+        <a href="/blog" ><img src="assets/images/logo.jpg"></a>
+        <a href="#" class="navbar-brand" style="margin-left: 20px;"></a>
+
+        </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navmenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a routerLink="/add" class="nav-link" style="color: aliceblue;">Create Blog</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/blog" class="nav-link" style="color: aliceblue;">Added Blogs</a>
+          </li>
+      
+          <li class="nav-item">
+            <a routerLink="" class="nav-link text-light" style=" color:aliceblue" (click)="logout()">Logout</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <section class="p-5">
+    <div class="container heading">
+      <div class="row text-center g-4">
+        <div class="col-md-12">
+            <h2 class="text-dark text-center">Meet Our Bloggers</h2>
+      </div>
+        <div class="col-md" *ngFor="let user of Users">
+          <div class="card bg-light text-dark">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <img src="assets/icon/person-circle.svg" alt="">
+              </div>
+              <h5 class="card-title mb-3">{{user.Firstname}} {{user.Lastname}}</h5>
+              <h5 class="card-title mb-3">{{user.Profession}}</h5>
+              <h5 class="card-title mb-3">{{user.Gender}}</h5>
+              <p class="card-text">
+                 {{user.email}}
+              </p>
+           
+            </div>
+          </div>
+        </div>
+  
+    </div>
+  </div>
+  </section>
+  <!-- Footer --> <router-outlet></router-outlet>
+<footer class="p-5 bg-warning text-light text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; 2021 Impilo blog</p>
+
+    
+</div>
+</footer>
+ 

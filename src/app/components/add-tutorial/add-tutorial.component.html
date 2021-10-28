@@ -1,0 +1,96 @@
+<!-- Navbar -->
+<nav  class="navbar navbar-expand-lg  navbar-dark py-3 ">
+  <div class="container">
+      <div class="logo">
+      <a href="/blog" ><img src="assets/images/logo.jpg"></a>
+      <a href="#" class="navbar-brand" style="margin-left: 20px; font-weight: bold;" >Impilo</a>
+
+      </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navmenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+              <a routerLink="/dashboard" class="nav-link" style="color: aliceblue;">Bloggers</a>
+            </li>
+           
+            <li class="nav-item">
+              <a routerLink="/blog" class="nav-link" style="color: aliceblue;">Added Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="" class="nav-link" style="color: aliceblue;" (click)="logout()">Log out</a>
+            </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- add -->
+<div class="card">
+<div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <h2>CREATE BLOG</h2>
+        
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="tutorial.title"
+          name="title"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="title">Author</label>
+        <input
+          type="text"
+          class="form-control"
+          id="author"
+          required
+          [(ngModel)]="tutorial.author"
+          name="author"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="tutorial.description"
+          name="description" 
+        />
+      </div>
+  
+      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+    </div>
+    
+    <div *ngIf="submitted">
+      <h4>You submitted successfully!</h4>
+      <!-- <button class="btn btn-warning" (click)="newTutorial()">Add Another?</button> -->
+      <a class="link" (click)="newTutorial()">Add Another?</a>
+      <button class="btn btn-success" routerLink="/blog">View Blogs</button>
+    </div>
+  </div>
+</div>
+<!-- Footer --> <router-outlet></router-outlet>
+<footer class="p-5 bg-warning text-light text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; 2021 Impilo blog</p>
+
+    
+</div>
+</footer>
+ 

@@ -1,0 +1,61 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg  navbar-dark py-3 ">
+  <div class="container">
+    <div class="logo">
+      <a href=""><img src="assets/images/logo.jpg"></a>
+      <a href="#" class="navbar-brand" style="margin-left: 20px; font-weight: bold;">Impilo</a>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+
+    <!-- get blog -->
+    <div class="col-md-6">
+      <div class="list">
+
+
+        <ul class="list-group">
+          <div class="cards">
+            <li class="list-group-item " *ngFor="let tutorial of tutorials; let i = index"
+              [class.active]="i == currentIndex" (click)="setActiveTutorial(tutorial, i)">
+              {{ tutorial.title }}
+            </li>
+          </div>
+
+        </ul>
+      </div>
+      <div *ngIf="!currentTutorial">
+        <img src="/assets/images/logo.jpg" alt="logo">
+        <br />
+        <p>Please click on a Blog...</p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+
+
+
+      <!-- card -->
+      <div *ngIf="currentTutorial" class="card">
+        <h2 padding-left="15%">Title :{{currentTutorial.title}}</h2>
+        <h4>Author :{{currentTutorial.author}}</h4>
+        <br>
+        <h4>Details</h4>
+        <p>{{currentTutorial.description}}</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer --> <router-outlet></router-outlet>
+<footer class="p-5 bg-warning text-light text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; 2021 Impilo blog</p>
+
+    
+</div>
+</footer>
+ 

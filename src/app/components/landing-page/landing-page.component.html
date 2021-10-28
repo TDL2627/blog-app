@@ -1,0 +1,203 @@
+<!-- Navbar -->
+<nav  class="navbar navbar-expand-lg  navbar-dark py-3 fixed-top">
+    <div class="container">
+        <div class="logo">
+        <a href="" ><img src="assets/images/logo.jpg"></a>
+        <a href="#" class="navbar-brand" style="margin-left: 20px; font-weight: bold;" >Impilo</a>
+
+        </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navmenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          
+              
+          <li class="nav-item">
+            <a routerLink="/login" class="nav-link" style="color: aliceblue;">Login</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/signup" class="nav-link" style="color: aliceblue;">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/blogs" class="nav-link" style="color: aliceblue;">Blogs</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Image slider -->
+
+
+  
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/krukov.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Yoga</h5>
+          <p> Yoga improves strength, balance and flexibility.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/food.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Nutrition</h5>
+          <p>Nutrition may help you live longer.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/bullying.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>ADHD</h5>
+          <p>Individuals with ADHD are bright, creative, and funny.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<!-- Our blogs -->
+<section class="bg-warning text-light p-3">
+    <div class="container">
+      <div class="d-md-flex justify-content-between align-items-center">
+        <h3 class="mb-1 mb-md-0">Our blogs</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Boxes -->
+  <section class="p-5">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md">
+          <div class="card bg-light text-dark">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <span class="material-icons">
+                <img src="assets/images/fitness.jpg" alt="">
+                </span>
+              <h3 class="card-title mb-3">Fitness</h3>
+              <p class="card-text p-2">
+                Fitness means the condition of being physically and 
+                mentally fit with good health. It is the ability 
+                to carry out daily tasks with vigor and alertness, without 
+                undue fatigue, and with ample energy to enjoy life.
+              </p>
+              <a routerLink="/fitness" class="btn btn-warning text-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card bg-light text-dark">
+            <div class="card-body text-center">
+              <div class="h1 mb-3">
+                <i class="bi bi-people"></i>
+              </div>
+              <span class="material-icons">
+                <img src="assets/images/covid.jpg" alt="">
+                </span>
+              <h3 class="card-title mb-3">Covid 19</h3>
+              <p class="card-text">
+                Coronavirus disease (COVID-19) is an infectious disease caused by a newly 
+                discovered coronavirus.
+                Most people infected with the COVID-19 virus will experience mild to 
+                moderate respiratory illness and recover without requiring special treatment.  
+        
+                </p>
+              <a routerLink="/covid" class="btn btn-warning text-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+            <div class="card bg-light text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span class="material-icons">
+                    <img src="assets/images/mental.jpg" alt="">
+                    </span>
+                <h3 class="card-title mb-3">Mental</h3>
+                <p class="card-text">
+                    Mental health includes your emotional, psychological and social well-being.
+                     It affects how we think, act and feel. Mental health problems are common 
+                    but help is available in order for one to recover.Depression and obsession dont mix
+                    
+                </p>
+                <a routerLink="/mental" class="btn btn-warning text-dark">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-light text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span class="material-icons">
+                    <img src="assets/images/acne.jpg" alt="">
+                    </span>
+                <h3 class="card-title mb-3">Acne</h3>
+                <p class="card-text">
+                    Pimples,black heads and zits can be unappealing.most of us suffer from it.
+                    Want to make it disappear?Pimples develop when sebaceous glands, or oil glands, become clogged and infected
+                    leading to swollen, red lesions filled with pus.
+                    nasty
+                </p>
+                <a routerLink="/acne" class="btn btn-warning text-dark">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-light text-dark">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span class="material-icons">
+                    <img src="assets/images/vegetables.jpg" alt="">
+                    </span>
+                <h3 class="card-title mb-3">Nutrition</h3>
+                <p class="card-text">
+                 Good foods are healthy food.Here is some insight.Nutrition also focuses on how people can use dietary choices to reduce the risk of disease, what happens if a person has too much or too little of a nutrient, and how allergies work.
+                 healty food
+                </p>
+                <a  routerLink="/nutrition" class="btn btn-warning text-dark">Read More</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+<!-- Footer --> <router-outlet></router-outlet>
+<footer class="p-5 bg-warning text-light text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; 2021 Impilo blog</p>
+
+    
+</div>
+</footer>
+ 

@@ -1,0 +1,106 @@
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-dark py-3 ">
+      <div class="container">
+        <div class="logo">
+          <a href="/blog"><img src="assets/images/logo.jpg"></a>
+          <a href="#" class="navbar-brand" style="margin-left: 20px; font-weight: bold;">Impilo</a>
+    
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a routerLink="/dashboard" class="nav-link" style="color: aliceblue;">Bloggers</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/add" class="nav-link" style="color: aliceblue;">Create Blog</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="" class="nav-link" style="color: aliceblue;" (click)="logout()">Log out</a>
+            </li>
+    
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Blogs</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+  
+<div class="container">
+  <div class="row">
+
+    <!-- get blog -->
+    <div class="col-md-6">
+      <div class="list">
+
+
+        <ul class="list-group">
+          <div class="cards">
+            <li class="list-group-item " *ngFor="let tutorial of tutorials; let i = index"
+              [class.active]="i == currentIndex" (click)="setActiveTutorial(tutorial, i)">
+              {{ tutorial.title }}
+            </li>
+          </div>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+
+
+
+      <!-- card -->
+      <div *ngIf="currentTutorial" class="card">
+        <h2 padding-left="15%">Title :{{currentTutorial.title}}</h2>
+        <h4>Author :{{currentTutorial.author}}</h4>
+        <br>
+        <h4>Details</h4>
+        <p>{{currentTutorial.description}}</p>
+
+      </div>
+    </div>
+  </div>
+  <!-- edit -->
+  <div class="col-md-6">
+    <div class="card" margin-left="15%" *ngIf="currentTutorial">
+      <app-tutorial-details (refreshList)="refreshList()" [tutorial]="currentTutorial"></app-tutorial-details>
+    </div>
+
+    <div *ngIf="!currentTutorial">
+      <img src="/assets/images/logo.jpg" alt="logo">
+      <br />
+      <p>Please click on a Blog...</p>
+    </div>
+  </div>
+</div>
+<!-- Footer --> <router-outlet></router-outlet>
+<footer class="p-5 bg-warning text-light text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; 2021 Impilo blog</p>
+
+    
+</div>
+</footer>
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
